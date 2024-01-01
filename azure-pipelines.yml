@@ -1,0 +1,21 @@
+trigger:
+- main
+
+pool:
+  vmImage: 'windows-latest'  # You can choose the appropriate image based on your requirements
+
+jobs:
+- job: RunPlaywright
+  displayName: 'Run Playwright Test'
+  steps:
+  - task: UsePythonVersion@0
+    inputs:
+      versionSpec: '3.11.4'
+      addToPath: true
+
+  - script: |
+      python -m pip install --upgrade pip
+      pip install playwright==1.39.0
+  - script: |
+      python playwright_sample.py
+  - task: LambdatestResults@1

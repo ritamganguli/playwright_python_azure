@@ -20,3 +20,4 @@ jobs:
       export LT_USERNAME="ritamg"
       export LT_ACCESS_KEY="TK7DCf2rFcBJzT3IHz4kD47lThhsHckrlGtiGkYyetAcixtrj5"
       python playwright_sample.py
+  - task: LambdatestResults@1

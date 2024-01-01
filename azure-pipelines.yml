@@ -10,7 +10,7 @@ jobs:
   steps:
   - task: configuration@1
     inputs:
-      connection: 'ritam'
+      connection: 'ritam123'
       isTunnelActivate: false
       isAppAutomate: false
       isSmartUI: false

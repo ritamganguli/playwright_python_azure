@@ -1,4 +1,5 @@
 trigger:
+
 - main
 
 pool:
@@ -8,6 +9,12 @@ jobs:
 - job: RunPlaywright
   displayName: 'Run Playwright Test'
   steps:
+  - task: configuration@1
+  inputs:
+    connection: 'ritam'
+    isTunnelActivate: false
+    isAppAutomate: false
+    isSmartUI: false
   - task: UsePythonVersion@0
     inputs:
       versionSpec: '3.11.4'

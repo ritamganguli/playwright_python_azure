@@ -26,7 +26,6 @@ jobs:
   - script: |
       export LT_USERNAME="ritamg"
       export LT_ACCESS_KEY="TK7DCf2rFcBJzT3IHz4kD47lThhsHckrlGtiGkYyetAcixtrj5"
-      export LT_BUILD_NAME="Ritam"
       python playwright_sample.py
 
   - task: LambdatestResults@1

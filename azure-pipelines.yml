@@ -2,7 +2,7 @@ trigger:
 - main
 
 pool:
-  vmImage: 'windows-latest'  # You can choose the appropriate image based on your requirements
+  vmImage: 'ubuntu-latest'  # You can choose the appropriate Linux image
 
 jobs:
 - job: RunPlaywright
@@ -17,5 +17,6 @@ jobs:
       python -m pip install --upgrade pip
       pip install playwright==1.39.0
   - script: |
+      export LT_USERNAME="ritamg"
+      export LT_ACCESS_KEY="TK7DCf2rFcBJzT3IHz4kD47lThhsHckrlGtiGkYyetAcixtrj5"
       python playwright_sample.py
-  - task: LambdatestResults@1
